@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=adge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>我的钱包</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/myPurse.js"></script>
+</head>
+<body>
+<header id="header">
+    <span class="glyphicon glyphicon-menu-left back" aria-hidden="true"></span>
+    我的钱包余额：
+</header>
+<div class="content-wrap" style="padding:0 16px 16px 16px;">
+
+    <div id="book-wrap">
+        <div id="box2" class="list-group" style="margin: 10px 0;">
+            <!--模板-->
+            <!--<a href="#" class="list-group-item demo"  >-->
+                <!--<h4 class="list-group-item-heading">2048-122-12 14:50</h4>-->
+                <!--<p class="list-group-item-text"><span>支付：支付宝支付</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;支付金额：<span class="" style="color: red">￥0.1</span></p>-->
+                <!--<p class="list-group-item-text">状态：等待</p>-->
+            <!--</a>-->
+
+        </div>
+
+        <!-- Large modal -->
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">余额提现</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+                            <div class="form-group">
+                                <label for="message-amount" class="control-label">输入提现金额:</label>
+                                <input type="number" class="form-control" id="message-amount">
+                                <label for="message-weChat" class="control-label">输入微信账号:</label>
+                                <input type="text" class="form-control" id="message-weChat">
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" id="btn-send">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<footer id="footer">
+    <button type="button" class="btn btn-primary btn-lg btn-block" id="tiXian" data-toggle="modal" data-target=".bs-example-modal-lg">余额提现</button>
+</footer>
+</body>
+</html>

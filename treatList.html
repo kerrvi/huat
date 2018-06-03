@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=adge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>治疗评价</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/treatList.css">
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/treatList.js"></script>
+</head>
+<body>
+<header id="header">
+    <span class="glyphicon glyphicon-menu-left back" aria-hidden="true"></span>
+    治疗评价
+</header>
+
+
+<!-- Tab panes -->
+<div class="tab-content" style="padding:0 16px 16px 16px;">
+    <div role="tabpanel" class="tab-pane active" id="home">
+        <div id="wrap" style="margin: 10px 0;">
+            <div id="box" class="list-group">
+                <!--模板-->
+                <!--<a href="#" class="list-group-item active demo" data-toggle="modal" data-target=".bs-example-modal-lg" >-->
+                <!--<h4 class="list-group-item-heading">第一疗程第一次治疗（2048-122-12）</h4>-->
+                <!--<p class="list-group-item-text"><span>治疗医生：程医生</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>患者：ofo</span></p>-->
+                <!--</a>-->
+            </div>
+
+            <!-- Large modal -->
+
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="exampleModalLabel">填写治疗评价</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+
+                                <div class="form-group">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 好评
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 中评
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 差评
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="control-label">评价内容:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" id="btn-send">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+        <div id="wrap2">
+            <div id="box2" class="list-group">
+                <!--模板-->
+                <!--<a href="#" class="list-group-item active demo" data-toggle="modal" data-target=".bs-example-modal-lg" >-->
+                <!--<h4 class="list-group-item-heading">第一疗程第一次治疗（2048-122-12）</h4>-->
+                <!--<p class="list-group-item-text"><span>治疗医生：程医生</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>患者：ofo</span></p>-->
+                <!--</a>-->
+            </div>
+
+            <!-- Large modal -->
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-pills nav-justified" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">未评价</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已评价</a></li>
+
+    </ul>
+
+
+
+</body>
+</html>

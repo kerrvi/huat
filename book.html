@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=adge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>挂号预约</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/book.css">
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/book.js"></script>
+</head>
+<body>
+<header id="header">
+    <span class="glyphicon glyphicon-menu-left back" aria-hidden="true"></span>
+   挂号预约
+</header>
+<div class="content-wrap" style="padding:0 16px 16px 16px;">
+    <form>
+        <h4 id="shop-title">预约诊所 <span style="font-size: 14px;">(赠送会员需选)</span></h4>
+        <div class="form-group" id="show-wrap">
+            <!--<label class="radio-inline">-->
+                <!--<input type="radio" name="inlineRadioOptions"  value="3"> 诊所-->
+            <!--</label>-->
+        </div>
+        <h4>预约医生</h4>
+        <div class="form-group" id="doctor-wrap">
+            <label class="radio-inline showDetail">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 藍醫生
+            </label>
+            <!--<label class="radio-inline">-->
+                <!--<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 中评-->
+            <!--</label>-->
+            <!--<label class="radio-inline">-->
+                <!--<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 差评-->
+            <!--</label>-->
+        </div>
+        <div class="wrapBox">
+            <div id="date-wrap" style="padding: 5px 0;line-height: 30px;">
+                各时间段可预约人数：
+                <button type="button" class="btn btn-default btn-sm" id="current">本周</button>
+                <button type="button" class="btn btn-default btn-sm" id="next">下一周</button>
+            </div>
+
+            <div class="tableBox2" >
+                <div class="tableLeft" id="time-wrap">
+                    <div class="head" id="time-first" style="border-top: solid 1px #cd764c;">
+                        时间
+                    </div>
+                    <div id="new-wrap"></div>
+                    <!--<div class="head" >-->
+                        <!--9:00-->
+                    <!--</div>-->
+
+
+                </div>
+                <div class="tableRight">
+                    <div class="table-row" id="day-wrap">
+                        <div class="head">周一</div>
+                        <div class="head">周二</div>
+                        <div class="head">周三</div>
+                        <div class="head">周四</div>
+                        <div class="head">周五</div>
+                        <div class="head">周六</div>
+                        <div class="head">周日</div>
+                    </div>
+                    <div class="table-row" *ngFor="let book of bookSum" id="used-wrap">
+                        <!--<div class="head" >-->
+                            <!--0-->
+                        <!--</div>-->
+                        <!--<div class="head" [ngStyle]="{'color': book.day2?'red':'green'}" (click)="book.day2?getBookList(book.begTime,beginDate2):null">-->
+                            <!--0-->
+                        <!--</div>-->
+                        <!--<div class="head" [ngStyle]="{'color': book.day3?'red':'green'}" (click)="book.day3?getBookList(book.begTime,beginDate3):null">-->
+                            <!--0-->
+                        <!--</div>-->
+                        <!--<div class="head" [ngStyle]="{'color': book.day4?'red':'green'}" (click)="book.day4?getBookList(book.begTime,beginDate4):null">-->
+                            <!--0-->
+                        <!--</div>-->
+                        <!--<div class="head" [ngStyle]="{'color': book.day5?'red':'green'}" (click)="book.day5?getBookList(book.begTime,beginDate5):null">-->
+                            <!--0-->
+                        <!--</div>-->
+                        <!--<div class="head" [ngStyle]="{'color': book.day6?'red':'green'}" (click)="book.day6?getBookList(book.begTime,beginDate6):null">0-->
+                        <!--</div>-->
+                        <!--<div class="head" [ngStyle]="{'color': book.day7?'red':'green'}" (click)="book.day7?getBookList(book.begTime,beginDate7):null">-->
+                            <!--0-->
+                        <!--</div>-->
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="message-text" class="control-label">添加备注:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+        </div>
+    </form>
+    <button class="btn-block btn-lg btn-danger" id="btn-submit">提交</button>
+
+    <!--醫師modal-->
+    <div class="modal fade" id="doctor-modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">医师详细</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="thumbnail mess-wrap" id="mess-wrap">
+                                <!--<img  src="./images/header.jpg">-->
+                                <!--<div class="caption">-->
+                                    <!--<ul class="list-group">-->
+                                        <!--<li class="list-group-item">姓名：蓝医生</li>-->
+                                        <!--<li class="list-group-item">年龄：50</li>-->
+                                        <!--<li class="list-group-item">性别：男</li>-->
+                                        <!--<li class="list-group-item">诊所：</li>-->
+                                        <!--<li class="list-group-item">电话：1232324556</li>-->
+                                        <!--<li class="list-group-item">微信：5555</li>-->
+                                        <!--<li class="list-group-item">邮箱：5555</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">確定</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+</body>
+</html>

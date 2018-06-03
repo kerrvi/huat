@@ -1,0 +1,14 @@
+.nav>li {
+    width: 49%;
+    display: inline-block;
+}
+.nav>li>a {
+    background-color: #dff0d8;
+}
+.nav {
+    position: fixed;
+    bottom: 0;
+}
+.tab-content {
+    margin-bottom: 50px;
+}

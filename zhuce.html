@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=adge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>用户注册</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/zhuce.css">
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/zhuce.js"></script>
+</head>
+<body>
+<header id="header">
+    <span class="glyphicon glyphicon-menu-left back" aria-hidden="true"></span>
+    用户注册
+</header>
+<div class="content-wrap" style="padding:0 16px 16px 16px;">
+
+    <div id="wrap" style="margin: 10px 0;">
+        <h3>填写注册信息！</h3>
+        <input id="userName" type="text" placeholder="录入用户姓名">
+        <input id="loginCode" type="text" placeholder="录入登录账号">
+        <input id="loginPwd" type="password" placeholder="录入登录密码">
+        <input id="referraCode" type="text" placeholder="录入邀请码">
+
+        <div class="checkbox" style="margin-left: 5%;">
+            <label>
+                <input type="checkbox" id="reader2"> <a
+                    href="http://www.wskj020.com:9179/UploadFile/RegLicense/RegLicense.html"
+                    style="text-align: center;"><p>阅读《注册协议》！</p></a>
+            </label>
+        </div>
+        <div style="text-align: center; margin:5%;">
+            <button id="btn-send" class="btn-block" style="height: 50px;opacity: .9;">
+                注册
+            </button>
+        </div>
+    </div>
+</div>
+<div id="big-show">
+    <h3 id="title">注册成功！即将为您跳转.</h3>
+</div>
+</body>
+</html>

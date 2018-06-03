@@ -1,0 +1,39 @@
+#content {
+    background: url('../images/dlbg.jpg') no-repeat;
+    background-size:cover;
+}
+
+.box {
+    /*background: rgba(255, 255, 255, 0.4);*/
+    height: 700px;
+    padding: 50px 0;
+}
+
+#wrap {
+    /*width:90%;*/
+    color: #fff;
+    /*background: rgba(255, 255, 255, 0.7);*/
+    padding: 20px 0;
+    margin:0 auto;
+}
+
+#wrap h2 {
+    text-align: center;
+}
+#wrap input {
+    width: 90%;
+    height: 50px;
+    margin: 5%;
+    border: 0;
+    border-radius: 64px;
+    text-align: center;
+    background-color: rgba(224, 224, 224, 0.48);
+}
+#wrap button {
+    height: 50px;
+    border-radius: 64px;
+    background: #28a54c;
+    color: #fff;
+}
+
+

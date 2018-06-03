@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style:none;
+}
+#header {
+    height: 44px;
+    background-color: yellowgreen;
+    line-height: 44px;
+    text-align: center;
+    font-size: 20px;
+}
+#header .back {
+    float: left;
+    height: 44px;
+    line-height: 44px;
+    width: 44px;
+}
+#footer {
+    position: fixed;
+    bottom:0;
+    height: 60px;
+    width: 100%;
+    /*background-color: yellowgreen;*/
+    text-align: center;
+    font-size: 20px;
+}

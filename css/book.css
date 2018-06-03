@@ -1,0 +1,125 @@
+/*扩展*/
+.thumbnail>img {
+    width: 200px;
+    height: 200px;
+}
+
+
+
+.wrapBox {
+    margin:20px 0;
+}
+.tableBox2 {
+    overflow: hidden;
+}
+
+.tableLeft {
+    float: left;
+    width: 16.66%;
+}
+.tableLeft .head {
+    border-bottom: solid 1px #cd764c;
+    border-right: solid 1px #cd764c;
+    border-left: solid 1px #cd764c;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    color: #262626;
+    justify-content: center;
+    float: left;
+}
+
+.tableRight {
+    float: left;
+    width: 83.33%;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.tableRight #day-wrap {
+    border-top:solid 1px #D1D3D6;
+}
+.tableRight .table-row {
+    width: 420px;
+    width: 140.5%;
+}
+.tableRight .table-row .head {
+    border-bottom: solid 1px #D1D3D6;
+    border-right: solid 1px #D1D3D6;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    width: 14.28%;
+    font-size: 14px;
+    color: #262626;
+    justify-content: center;
+    float: left;
+    text-align: center;
+}
+.tableRight #used-wrap .head{
+    color: green;
+}
+
+
+.grid {
+    color: #fff;
+    padding: 0;
+}
+.col {
+    background-color: #2EC95C;
+    overflow: hidden;
+    border: 2px solid;
+    padding: 16px;
+}
+
+p,h5,h6,span {
+    margin: 0;
+}
+.col p {
+    height: 20px;
+    line-height: 20px;
+    color: cornsilk;
+}
+.col .header {
+    /*float: left;*/
+    /*border-radius: 50%;*/
+    border: 2px solid #fff;
+    width: 200px;
+    height: 200px;
+    /*margin: 5px 12px 0 5px;*/
+}
+.col .content-right {
+    /*float: left;*/
+}
+.col .age {
+    font-size:13px;
+}
+.col .state {
+    position: absolute;
+    right: -38px;
+    top: -7px;
+    width: 110px;
+    font-size: 17px;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #488aff;
+    height: 50px;
+    line-height: 78px;
+}
+.col .vip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    background-color: orange;
+    border-radius: 0 0px 10px 0;
+    z-index:12;
+}
+.col .free-vip {
+    background-color: #F53DCD;
+}
+
+
+

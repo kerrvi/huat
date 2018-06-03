@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=adge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>我的预约</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/myBook.css">
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/myBook.js"></script>
+</head>
+<body>
+<header id="header">
+    <span class="glyphicon glyphicon-menu-left back" aria-hidden="true"></span>
+    我的预约
+</header>
+<div class="content-wrap" style="padding:0 16px 16px 16px;">
+    <h4>预约医生</h4>
+    <div class="form-group" id="doctor-wrap">
+
+    </div>
+
+    <div style="margin: 16px 0;">
+        从 <input type="date" id="begDay">
+        到 <input type="date" id="endDay">
+    </div>
+
+
+    <div id="book-wrap">
+        <div id="box2" class="list-group">
+            <!--模板-->
+            <!--<a href="#" class="list-group-item active demo" data-toggle="modal" data-target=".bs-example-modal-lg" >-->
+            <!--<h4 class="list-group-item-heading">第一疗程第一次治疗（2048-122-12）</h4>-->
+            <!--<p class="list-group-item-text"><span>治疗医生：程医生</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>患者：ofo</span></p>-->
+            <!--</a>-->
+        </div>
+
+        <!-- Large modal -->
+        <!-- Large modal -->
+
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">预约取消</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+                            <div class="form-group">
+                                <!--<label class="radio-inline">-->
+                                    <!--<input type="radio" name="inlineRadioOptions" id="inlineRadio0" value="0"> 已预约-->
+                                <!--</label>-->
+                                <!--<label class="radio-inline">-->
+                                    <!--<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 已就诊-->
+                                <!--</label>-->
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" checked> 取消
+                                </label>
+                                <!--<label class="radio-inline">-->
+                                    <!--<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 已失约-->
+                                <!--</label>-->
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="control-label">取消原因说明:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" id="btn-send">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+</body>
+</html>

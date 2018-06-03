@@ -1,0 +1,81 @@
+/*扩展*/
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    height: 230px;
+    width: 100%;
+}
+
+/*自定义*/
+.content-wrap {
+    /*max-width:640px;*/
+}
+.content-wrap .top {
+    
+}
+.content-wrap .nav-box {
+
+}
+.content-wrap .nav-box ul li {
+    height: 170px;
+    background: url("../images/nav1.jpg") no-repeat;
+    background-size: cover;
+    /*list-style:none;*/
+}
+.content-wrap .nav-box ul li:nth-child(2){
+    background: url("../images/nav2.jpg") no-repeat;
+    background-size: cover;
+}
+.content-wrap .nav-box ul li:nth-child(3){
+    background: url("../images/nav3.jpg") no-repeat;
+    background-size: cover;
+}
+.content-wrap .nav-box ul li div {
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    padding-top: 35px;
+}
+.content-wrap .nav-box ul li div .glyphicon {
+    font-size: 55px;
+}
+.content-wrap .nav-box ul li div>p {
+    font-size:16px;
+    font-weight: 600;
+    line-height: 36px;
+}
+.content-wrap .nav-box ul li div#setting {
+    border-left:2px solid #fff;
+    padding: 0;
+}
+.content-wrap .nav-box ul li div#setting .glyphicon {
+    font-size:45px;
+}
+.content-wrap .nav-box ul li div#setting .shang {
+    width: 100%;
+    height: 50%;
+    border-bottom:2px solid #fff;
+    padding-top: 5px;
+}
+.content-wrap .nav-box ul li div#setting .xia {
+    width: 100%;
+    height: 50%;
+    padding-top: 5px;
+}
+
+/*底部*/
+@keyframes first {
+    0%{background: red}
+    25%{background: yellow}
+    50%{background: green}
+    75%{background: blue}
+    100%{background: purple}
+}
+.content-wrap .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:5px;
+    animation: first 10s infinite;
+
+}
