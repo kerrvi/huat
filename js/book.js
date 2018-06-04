@@ -24,7 +24,12 @@ $(document).ready(function(){
     bookEdit.userId = currentUser.id;
 
     /*提交*/
-    $('#btn-submit').on('click',function(){
+    $('.btn-submit').on('click',function(){
+        console.log(bookEdit);
+        if(!bookEdit.doctorId){
+            alert('请选择预约医师');
+            return;
+        }
         if(!bookEdit.bookTime || !bookEdit.bookDate){
             alert('请选择预约时间');
             return;
@@ -219,13 +224,33 @@ $(document).ready(function(){
     });
 
     /*醫師*/
+    $('#doctorList').on('click',function () { // 显示医师列表
+        $('#doctorList-modal').modal('toggle');
+        var html = '';
+        for(var i = 0; i < doctors.length;i++){
+            html += '<div class="col-lg-6 col-md-6 col-sm-6"> <div class="thumbnail">' +
+                '<img src="'+ headerPath+doctors[i].headerName +'">' +
+                '<div class="caption"><h3>'+ doctors[i].userName +'</h3>' +
+                '  <p>'+ doctors[i].remark +'</p>' +
+                '<p><button class="btn btn-danger" role="button" data-doctorId="'+ doctors[i].id +'">选择</button></p></div></div></div>';
+        }
+        $('#doctorList-wrap').html(html);
+    });
+    $('#doctorList-wrap').on('click','.btn-danger',function () {
+        // bookEdit.bookDate = '';
+        // bookEdit.bookTime = '';
+        bookEdit.doctorId = this.getAttribute('data-doctorId');
+
+    });
+
+
     $('#doctor-wrap').on('change','input[type="radio"]',function(){
         bookEdit.bookDate = '';
         bookEdit.bookTime = '';
         bookEdit.doctorId = this.value;
         getBookUsed(this.value);
     });
-    $('#doctor-wrap').on('click','input[type="radio"]',function(){
+    $('#doctor-wrap').on('click','input[type="radio"]',function(){ // 显示医师信息
        $('#doctor-modal').modal('toggle');
        for(var i = 0; i < doctors.length;i++){
            if(doctors[i].id == this.value){
@@ -263,10 +288,10 @@ $(document).ready(function(){
             success: function (result) {
                 var info = JSON.parse(result);
                 console.log('ajax...........');
-                console.log(info);
 
                 if (info.success == true) {
                     doctors = info.list;
+                    console.log(doctors);
                     showDoctor(doctors);
                 } else {
                     alert(JSON.stringify(info.message))
@@ -289,6 +314,8 @@ $(document).ready(function(){
     }
 
 });
+
+
 
 //格式化日期,
 function formatDate(date,format){

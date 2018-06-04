@@ -23,6 +23,7 @@
 <header id="header">
     <span class="glyphicon glyphicon-menu-left back" aria-hidden="true"></span>
    挂号预约
+    <button class="btn btn-default btn-submit">提交</button>
 </header>
 <div class="content-wrap" style="padding:0 16px 16px 16px;">
     <form>
@@ -32,7 +33,9 @@
                 <!--<input type="radio" name="inlineRadioOptions"  value="3"> 诊所-->
             <!--</label>-->
         </div>
-        <h4>预约医生</h4>
+        <h4 id="doctorList" >
+            预约医生 <span class="glyphicon glyphicon-th-list"></span>
+        </h4>
         <div class="form-group" id="doctor-wrap">
             <label class="radio-inline showDetail">
                 <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 藍醫生
@@ -107,7 +110,7 @@
             <textarea class="form-control" id="message-text"></textarea>
         </div>
     </form>
-    <button class="btn-block btn-lg btn-danger" id="btn-submit">提交</button>
+    <button class="btn-block btn-lg btn-danger btn-submit" id="btn-submit">提交</button>
 
     <!--醫師modal-->
     <div class="modal fade" id="doctor-modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
@@ -141,6 +144,36 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary">確定</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--醫師列表modal-->
+    <div class="modal fade" id="doctorList-modal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">关闭&times;</span></button>
+                    <h4 class="modal-title" id="doctorListModalLabel">医师列表</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="doctorList-wrap">
+                        <!--<div class="col-lg-6 col-md-6 col-sm-6">-->
+                            <!--<div class="thumbnail">-->
+                                <!--<img src="./images/header.jpg" alt="...">-->
+                                <!--<div class="caption">-->
+                                    <!--<h3>陈医师</h3>-->
+                                    <!--<p>介绍...</p>-->
+                                    <!--<p><a href="#" class="btn btn-danger" role="button">选择</a></p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <!--<button type="button" class="btn btn-primary">確定</button>-->
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
